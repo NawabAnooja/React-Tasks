@@ -14,7 +14,7 @@ const LoginForm = () => {
     city: '',
     pincode: '',
     accept_terms: false,
-  });
+  });   
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
