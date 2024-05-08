@@ -23,10 +23,9 @@ const LoginForm = () => {
       [name]: type === 'checkbox' ? checked : value,
     }));
 
-    // Clear validation errors when user starts typing
     setErrors((prevErrors) => ({
       ...prevErrors,
-      [name]: '', // Clear error for the current field
+      [name]: '', 
     }));
   };
   
