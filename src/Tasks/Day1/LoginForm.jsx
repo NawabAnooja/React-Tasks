@@ -33,24 +33,35 @@ const LoginForm = () => {
     e.preventDefault();
     const validationErrors = validateForm(formData);
     if (Object.keys(validationErrors).length === 0) {
-      const jsonData = JSON.stringify(formData);
-      console.log(jsonData);   
-      setFormData({
-        name: '',
-        email: '',
-        gender: '',
-        password: '',
-        confirm_password: '',
-        country: '',
-        state: '',
-        city: '',
-        pincode: '',
-        accept_terms: false,
-      });
+      fetch('http://localhost:3000/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Success:', data);
+          alert('success')
+          setFormData({
+            name: '',
+            email: '',
+            gender: '',
+            password: '',
+            confirm_password: '',
+            country: '',
+            state: '',
+            city: '',
+            pincode: '',
+            accept_terms: false,
+          });
+        })
     } else {
       setErrors(validationErrors);
     }
   };
+  
 
   const validateForm = (data) => {
     let errors = {};

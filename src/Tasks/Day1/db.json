@@ -1,0 +1,43 @@
+{
+  "users": [
+    {
+      "id": "6948",
+      "name": "abcd uvw",
+      "email": "abc@gmail.com",
+      "gender": "male",
+      "password": "11",
+      "confirm_password": "11",
+      "country": "india",
+      "state": "telangana",
+      "city": "hyderabad",
+      "pincode": "500024",
+      "accept_terms": true
+    },
+    {
+      "id": "e4e7",
+      "name": "abcd uvw",
+      "email": "abc@gmail.com",
+      "gender": "female",
+      "password": "11",
+      "confirm_password": "11",
+      "country": "india",
+      "state": "telangana",
+      "city": "hyderabad",
+      "pincode": "888888",
+      "accept_terms": true
+    },
+    {
+      "id": "d17e",
+      "name": "abcd uvw",
+      "email": "abc@gmail.com",
+      "gender": "female",
+      "password": "66",
+      "confirm_password": "66",
+      "country": "india",
+      "state": "telangana",
+      "city": "hyderabad",
+      "pincode": "888886",
+      "accept_terms": true
+    }
+  ]
+}
