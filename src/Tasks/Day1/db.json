@@ -38,6 +38,19 @@
       "city": "hyderabad",
       "pincode": "888886",
       "accept_terms": true
+    },
+    {
+      "id": "3277",
+      "name": "abcd uvw",
+      "email": "abc@gmail.co",
+      "gender": "female",
+      "password": "Anu@12345",
+      "confirm_password": "Anu@12345",
+      "country": "india",
+      "state": "telangana",
+      "city": "hyderabad",
+      "pincode": "888881",
+      "accept_terms": true
     }
   ]
 }

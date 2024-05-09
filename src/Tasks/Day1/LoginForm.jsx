@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './LoginForm.css'; 
+import { isValidName, isValidPassword } from './Validations';
 
 const LoginForm = () => {
   const [errors, setErrors] = useState({}); 
@@ -31,8 +32,14 @@ const LoginForm = () => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    const validationErrors = validateForm(formData);
-    if (Object.keys(validationErrors).length === 0) {
+    const errors = {
+      name: isValidName(formData.name) ? '' : 'Please enter a valid name.',
+      email: isValidEmail(formData.email) ? '' : 'Please enter a valid email address.',
+      password: isValidPassword(formData.password) ? '' : 'Password must contain at least one uppercase letter, one symbol, one digit, and be at least 8 characters long.'
+    };
+    setErrors(errors);
+
+    if (Object.values(errors).every(error => error === '')) {
       fetch('http://localhost:3000/users', {
         method: 'POST',
         headers: {
@@ -57,51 +64,10 @@ const LoginForm = () => {
             accept_terms: false,
           });
         })
-    } else {
-      setErrors(validationErrors);
+        .catch(error => {
+          console.error('Error:', error);
+        });
     }
-  };
-  
-
-  const validateForm = (data) => {
-    let errors = {};
-    if (!data.name.trim()) {
-      errors.name = 'Name is required';
-    }
-    if (!data.email.trim()) {
-      errors.email = 'Email is required';
-    } else if (!isValidEmail(data.email)) {
-      errors.email = 'Invalid email format';
-    }
-    if (!data.gender) {
-      errors.gender = 'Gender is required';
-    }
-    if (!data.password.trim()) {
-      errors.password = 'Password is required';
-    }
-    if (!data.confirm_password.trim()) {
-      errors.confirm_password = 'Confirm Password is required';
-    } else if (data.confirm_password !== data.password) {
-      errors.confirm_password = 'Passwords do not match';
-    }
-    if (!data.country) {
-      errors.country = 'Country is required';
-    }
-    if (!data.state) {
-      errors.state = 'State is required';
-    }
-    if (!data.city) {
-      errors.city = 'City is required';
-    }
-    if (!data.pincode.trim()) {
-      errors.pincode = 'Pincode is required';
-    } else if (!isValidPincode(data.pincode)) {
-      errors.pincode = 'Invalid pincode';
-    }
-    if (!data.accept_terms) {
-      errors.accept_terms = 'You must accept the terms and conditions';
-    }
-    return errors;
   };
 
   const isValidEmail = (email) => {
