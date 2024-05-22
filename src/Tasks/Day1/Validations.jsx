@@ -14,5 +14,13 @@ const isValidName = (name) => {
   const isValidPassword = (password) => {
     return /^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9]).{8,}$/.test(password);
   };
+  export const isValidProductName = (name) => {
+    return name.trim().length > 0;
+  };
+  
+  export const isValidPrice = (price) => {
+    return !isNaN(price) && parseFloat(price) > 0;
+  };
+  
  
   export { isValidName, isValidEmail, isValidPhoneNumber, isValidPassword };

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './LoginForm.css'; 
+import './Form.css'; 
 import { isValidName, isValidPassword } from './Validations';
 
-const LoginForm = () => {
+const RegistrationForm = () => {
   const [errors, setErrors] = useState({}); 
   const [formData, setFormData] = useState({
     name: '',
@@ -35,7 +35,8 @@ const LoginForm = () => {
     const errors = {
       name: isValidName(formData.name) ? '' : 'Please enter a valid name.',
       email: isValidEmail(formData.email) ? '' : 'Please enter a valid email address.',
-      password: isValidPassword(formData.password) ? '' : 'Password must contain at least one uppercase letter, one symbol, one digit, and be at least 8 characters long.'
+      password: isValidPassword(formData.password) ? '' : 
+      'Password must contain at least one uppercase letter,one symbol, one digit, and be at least 8 characters long.'
     };
     setErrors(errors);
 
@@ -74,13 +75,10 @@ const LoginForm = () => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
-  const isValidPincode = (pincode) => {
-    return /^\d{6}$/.test(pincode);
-  };
 
   return (
-    <div className="login-form">
-      <h2>LoginForm</h2>
+    <div className="form">
+      <h2>RegistrationForm</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
@@ -163,8 +161,9 @@ const LoginForm = () => {
           <input type="submit" value="Save" />
         </div>
       </form>
+      
     </div>
   );
 };
 
-export default LoginForm;
+export default RegistrationForm;

@@ -1,0 +1,154 @@
+{
+  "Products": [
+    {
+      "id": "e2f3",
+      "name": "Doll",
+      "price": "888",
+      "category": "Toy"
+    },
+    {
+      "id": "44a0",
+      "name": "Doll",
+      "price": "999",
+      "category": "Toy"
+    },
+    {
+      "id": "ea1e",
+      "name": "Doll",
+      "price": "111",
+      "category": "Toy"
+    },
+    {
+      "id": "7077",
+      "name": "Doll",
+      "price": "8",
+      "category": "Toy"
+    },
+    {
+      "id": "e428",
+      "name": "Doll",
+      "price": "99",
+      "category": "Toy"
+    },
+    {
+      "id": "cbc9",
+      "name": "Doll",
+      "price": "888",
+      "category": "Toy"
+    },
+    {
+      "id": "c33a",
+      "name": "Doll",
+      "price": "999",
+      "category": "Toy"
+    },
+    {
+      "id": "5966",
+      "name": "Doll",
+      "price": "88",
+      "category": "Toy"
+    },
+    {
+      "id": "2236",
+      "name": "Doll",
+      "price": "888",
+      "category": "Toy"
+    },
+    {
+      "id": "6946",
+      "name": "Doll",
+      "price": "8888",
+      "category": "Toy"
+    },
+    {
+      "id": "bfc4",
+      "name": "Car",
+      "price": "88",
+      "category": "Toy"
+    },
+    {
+      "id": "4b2d",
+      "name": "Car",
+      "price": "600",
+      "category": "Toy"
+    },
+    {
+      "id": "bde6",
+      "name": "saree",
+      "price": "799",
+      "category": "Clothing",
+      "rating": "4"
+    },
+    {
+      "id": "117f",
+      "name": "Mobile",
+      "price": "65000",
+      "category": "Electronics",
+      "rating": "4"
+    },
+    {
+      "id": "3498",
+      "name": "car",
+      "price": "500",
+      "category": "Toys",
+      "rating": "4"
+    },
+    {
+      "id": "261b",
+      "name": "Ipad",
+      "price": "35000",
+      "category": "Electronics",
+      "rating": "4"
+    },
+    {
+      "id": "d80c",
+      "name": "Shirt",
+      "price": "899",
+      "category": "Clothing",
+      "rating": "3"
+    },
+    {
+      "id": "b3bc",
+      "name": "Novel",
+      "price": "799",
+      "category": "Books",
+      "rating": "4"
+    },
+    {
+      "id": "faf4",
+      "name": "Novel",
+      "price": "999",
+      "category": "Books",
+      "rating": "4"
+    },
+    {
+      "id": "15d7",
+      "name": "Novel",
+      "price": "7999",
+      "category": "Books",
+      "rating": "5"
+    },
+    {
+      "id": "1adf",
+      "name": "Shirt",
+      "price": "2999",
+      "category": "Clothing",
+      "rating": "5"
+    },
+    {
+      "id": "73fe",
+      "name": "IPhone",
+      "price": "67999",
+      "category": "Electronics",
+      "rating": "3",
+      "image":"https://cdn.mos.cms.futurecdn.net/yDn3ZSXu9eSBxmXQDZ4PCF-1200-80.jpg"
+    },
+    {
+      "id": "eb7a",
+      "name": "IPhone",
+      "price": "888888",
+      "category": "Electronics",
+      "rating": "3"
+    }
+  ]
+}
